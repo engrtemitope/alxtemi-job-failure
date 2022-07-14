@@ -5,8 +5,8 @@ jobs:
     docker:
       - image: circleci/node:13.8.0
     steps:
-      # with return 1 , the step will fail but it will still go to the next line of run
-      - run: return 1
+      # with exit 1 , the step will fail but it will still go to the next line of run
+      - run: exit 1
       - run:
           name: on error
           command: echo "Hello Error!"
